@@ -25,6 +25,8 @@ public class MongoDBCacheStoreConfig extends LockSupportCacheStoreConfig {
    }
 
    public MongoDBCacheStoreConfig(String host, int port, int timeout, String username, String password, String database, String collection, int acknowledgment) {
+
+      super.setCacheLoaderClassName(MongoDBCacheStore.class.getName());
       if (port < 1 || port > 65535) {
          log.mongoPortIllegalValue(port);
       }
