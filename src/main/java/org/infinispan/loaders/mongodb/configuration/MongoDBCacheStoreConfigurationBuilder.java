@@ -37,6 +37,7 @@ public class MongoDBCacheStoreConfigurationBuilder extends AbstractStoreConfigur
    @Override
    public MongoDBCacheStoreConfigurationBuilder read(MongoDBCacheStoreConfiguration template) {
       this.host = template.host();
+      this.port = template.port();
       this.username = template.username();
       this.password = template.password();
       this.database = template.database();
